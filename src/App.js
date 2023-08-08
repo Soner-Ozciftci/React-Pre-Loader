@@ -7,11 +7,17 @@ function App() {
 
   useEffect(()=>{
    setLoading(true) 
-setTimeout()
+setTimeout(()=>{
+  setLoading(false)
+},4000)
   },[])
   return (
     <div className="App">
-
+{
+  loading ?
+  :
+  <img src="https://c.tenor.com/32nHeCvxlwEAAAAM/you-tube-like-and-subscribe.gif" />
+}
     </div>
   );
 }
