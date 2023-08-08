@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react';
-import CircleLoader from "react-spinners/CircleLoader";
+import FadeLoader from "react-spinners/FadeLoader";
 import './App.css';
 
 function App() {
@@ -9,13 +9,13 @@ function App() {
    setLoading(true) 
 setTimeout(()=>{
   setLoading(false)
-},4000)
+},2000)
   },[])
   return (
     <div className="App">
 {
   loading ?
-  <CircleLoader
+  <FadeLoader
   color={'#D0021B'}
   loading={loading}
   size={150} />
