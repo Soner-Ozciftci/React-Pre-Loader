@@ -1,7 +1,6 @@
 import React, {useState,useEffect} from 'react';
+import CircleLoader from "react-spinners/CircleLoader";
 import './App.css';
-import ClipLoader from "react-spinners/ClipLoader";
-
 
 function App() {
   const [loading,setLoading]=useState(false);
@@ -16,14 +15,10 @@ setTimeout(()=>{
     <div className="App">
 {
   loading ?
-  
-  <ClipLoader
-  color={#D0021B}
+  <CircleLoader
+  color={'#D0021B'}
   loading={loading}
-  size={150}
-  aria-label="Loading Spinner"
-  data-testid="loader"
-/>
+  size={150} />
   :
   <img src="https://c.tenor.com/32nHeCvxlwEAAAAM/you-tube-like-and-subscribe.gif" />
 }
